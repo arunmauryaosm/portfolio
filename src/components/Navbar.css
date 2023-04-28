@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #1f242d;
+}
+.header .logo{
+    cursor: pointer;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background-color: rgb(24, 27, 28);
+}
+.logo{
+    font-size: 1.6rem;
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.navbar a {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #ffff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2rem;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+}
+.navbar a:hover,
+.navbar a.active {
+    color: #0ef;
+}
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .logo{
+        font-size: 0.9rem;
+        margin-right: 0.3rem;
+    }
+    .navbar a {
+        font-size: 0.6rem;
+        margin-left: 1.2rem;
+    }
+  }

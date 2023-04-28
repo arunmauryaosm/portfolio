@@ -1,0 +1,275 @@
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10rem 10%;
+    flex-direction: row-reverse;
+}
+.home_content{
+    color: #ffff;
+    max-width: 40rem;
+}
+.home_img img {
+    max-width: 20rem;
+    margin: -2rem;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+    animation-delay: 1s;
+}
+.home_content h3{
+    font-size: 2.3rem;
+    font-weight: 500;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home_content h3 span {
+    color: #0ef;
+}
+.home_content h1{
+    font-size: 3rem;
+    font-weight: 700;
+    padding: 0.5rem 0rem;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 0.7s;
+}
+.home_content p{
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.5s;
+    font-weight: 400;
+}
+.home_social_media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.3rem;
+    height: 4.3rem;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #0ef;
+    margin: 1.5rem 1.3rem 1.5rem 0rem;
+    padding: 0.7rem;
+    transition: 0.5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.5s;
+}
+.home_social_media a:hover{
+    background-color: #0ef;
+    color: black;
+    box-shadow: 0 0 20px #0ef;
+}
+
+.home_button{
+    display: inline-block;
+    background-color: #0ef;
+    color: black;
+    border-radius: 40px;
+    padding: 0.7rem 1rem;
+    border: none;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 1s;
+    cursor: pointer;
+}
+.home_button:hover{
+    box-shadow: 0 0 15px #0ef;
+
+}
+
+@keyframes slideBottom {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+@keyframes zoomIn{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+@keyframes floatImage {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/* phone css */
+
+
+@media screen and (max-width: 1210px) {
+    .home_img img {
+        max-width: 15rem;
+    }
+    .home_content h3{
+        font-size: 1.3rem;
+
+    }
+
+    .home_content h1{
+        font-size: 2rem;
+
+        padding: 0.3rem 0rem;
+  
+    }
+    .home_content p{
+        margin-top: 1rem;
+        font-size: 0.8rem;
+
+    }
+    .home_social_media a{
+
+        width: 2.3rem;
+        height: 2.3rem;
+
+        margin: 1rem 1rem 1rem 0rem;
+        padding: 0.7rem;
+
+    }
+
+    
+    .home_button{
+
+        padding: 0.3rem 0.7rem;
+
+        font-size: 0.7rem;
+
+    }
+  }
+
+  @media screen and (max-width: 830px) {
+    .home{
+        display:block;
+        padding-bottom: 0rem;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .home_img{
+        display: flex;
+        justify-content: center;
+    }
+
+    .home_img img {
+        max-width: 17rem;
+        justify-content: center;
+    }
+    .home_content h3{
+        font-size: 1.5rem;
+
+    }
+    .home_content{
+        padding: 5rem 0rem 0rem 0rem;
+    }
+    .home_content h1{
+        font-size: 2.3rem;
+
+        padding: 0.3rem 0rem;
+  
+    }
+    .home_social_media a{
+
+        width: 2.8rem;
+        height: 2.8rem;
+
+        margin: 1rem 1rem 1rem 0rem;
+        padding: 0.7rem;
+
+    }
+
+    
+    .home_button{
+
+        padding: 0.5rem 0.9rem;
+
+        font-size: 1rem;
+
+    }
+    .hash-span{
+        padding-bottom: 0px;
+        margin-top: 0px;
+    }
+    .py-10{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .py-10{
+        padding-top: 6rem;
+        padding-bottom: 0rem;
+    }
+    .home{
+        padding-top: 2rem;
+        padding-bottom: 0rem;
+    }
+    .home_img img{
+        width: 13rem;
+        height: 13rem;
+    }
+  }
