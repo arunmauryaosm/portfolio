@@ -134,7 +134,7 @@ const projects = [
     ],
     image: netflix,
     source_code_link: "https://github.com/arunmauryaosm/netflix",
-    demo_link: "https://netflixcloneprojec.netlify.app/"
+    demo_link: "https://main-netflix.netlify.app/"
   },
   {
     name: "News India",
